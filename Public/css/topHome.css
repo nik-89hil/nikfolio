@@ -70,3 +70,16 @@
     color: green;
     font-weight: 600;
 }
+
+
+@media screen and (max-width:768px){
+    .topHome{
+        border: none;
+        padding: 4vh;
+        
+    }
+    .topHome:hover{
+        border: none;
+    }
+
+}

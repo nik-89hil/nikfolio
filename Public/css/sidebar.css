@@ -20,8 +20,6 @@
 }
 
 
-
-
 .contentOne{
     width: 80%;
     margin: auto;
@@ -78,4 +76,29 @@
     color:  rgb(148, 127, 8);
     margin-left: 4vw;
     margin-top: 2vh;
+}
+
+
+@media screen and (max-width:768px) {
+    .SideBar{
+        height: 12vh;
+    }
+    .SideBar a{
+        font-size: 10px;
+    }
+    .SideBar .sendMessage{
+        display: none;
+    }
+    .contentOne{
+        width: 100%;
+        padding: 4vh;
+        border: none;
+
+    }
+    .contentOne h3{
+        border:2px solid rgb(148, 127, 8);
+        width: 95%;
+        padding: 1vh;
+    }
+   
 }
