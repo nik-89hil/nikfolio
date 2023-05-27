@@ -48,3 +48,15 @@
     cursor: pointer;
 }
 
+
+
+
+@media screen and (max-width:768px){
+    #curve_chart{
+        width: 100vw !important;
+        padding: 0px !important;
+        margin: 0 !important;
+        padding-left: -10px;
+
+    }
+}

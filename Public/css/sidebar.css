@@ -100,5 +100,9 @@
         width: 95%;
         padding: 1vh;
     }
+    .imagescont{
+        width: 95%;
+        height: 30vh;
+    }
    
 }
