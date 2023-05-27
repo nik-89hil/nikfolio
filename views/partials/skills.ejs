@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'HTML', 'CSS','JAVASCRIPT','NODE.JS','REACT.JS','MONGODB'],
+          ['JULY',  10, 10,20,5,20,10],
+          ['OCTOBER',40 ,90 ,70, 29, 70 ,25],
+          ['JANUARY', 60,90,40,60,70,60],
+          ['APRIL',  90,85,80,84,75,78],
+        
+        ]);
+
+        var options = {
+          title: 'Performance %',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div class="contentOne" >
+        <h3 >Skills &#127809; </h3>
+        <br><br>
+        <div class="groupOfskill">
+            <button>HTML5</button>
+            <button>CSS3</button>
+            <button>JAVASCRIPT</button>
+            <button>BOOTSTRAP</button>
+            <button>REACT.JS</button>
+            <button>NODE.JS</button>
+            <button>REST API's</button>
+            <button>MONGODB</button>
+            <button>NPM</button>
+            <button>GIT</button>
+            <button>ADOBE EXPRESS</button>
+            <button>TALWIND</button>
+            <button>....</button>
+        </div>
+        <div class="graphShow">
+            <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

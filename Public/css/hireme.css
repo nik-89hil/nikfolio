@@ -1,0 +1,66 @@
+.hiremecontainer{
+    width: 100%;
+    height: 85vh;
+    margin-top: 18vh;
+    background-color: rgb(148, 127, 8);
+    text-align: center;
+    padding-top: 7vh;
+    overflow-y: scroll;
+    padding-bottom: 4vh;
+    padding-bottom: 9vh;
+}
+
+.hiremecontainer button{
+    padding: 3vh;
+    border-radius: 7px;
+    font-weight: 700;
+    width: 30vw;
+    font-size: 20px;
+}
+
+
+.hirecontent{
+    width: 50vw;
+    border: 2px solid white;
+    padding: 10vh;
+    margin: auto;
+    font-weight: 500;
+    color: white;
+    border-radius: 5px;text-align: justify;
+    transition: 0.2s linear;
+}
+
+.hirecontent:hover{
+    color:rgb(87, 48, 123); 
+    font-size: 20px;
+    background-color: white;
+
+}
+
+.listforhire{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+  
+}
+
+.listforhire li{
+    border: 2px solid white;
+    border-radius: 150px;
+    width: 190px;
+    height: 190px;
+    padding: 6vh;
+    transition: 0.5s linear;
+}
+
+.listforhire li:hover{
+    background-color: white;
+    font-size: 20px;
+    width: 220px;
+    height: 220px;
+    color: rgb(87, 48, 123);
+    font-weight: 600;
+    padding: 7vh;
+
+}

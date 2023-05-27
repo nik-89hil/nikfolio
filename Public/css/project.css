@@ -1,0 +1,43 @@
+.projectDiv{
+  margin: auto;
+  width: 80%;
+  margin-top: 22vh;
+  padding: 5vh;
+  border: 2px solid rgb(148, 127, 8);
+  border-radius:15px;
+}
+
+.firstpro{
+  text-align: center;
+  margin: auto;
+  
+}
+.firstpro video{
+  object-fit: cover;
+  width: 90%;
+  margin-bottom: 4vh;
+  border-radius: 15px;
+  margin-top: 4vh;
+
+}
+
+
+.projectDiv img{
+ object-fit: cover;
+ width: 100%;
+}
+
+.firstpro{
+  padding: 0;
+}
+
+.viewCode{
+  padding: 2vh;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.viewCode:hover{
+  
+  color: rgb(148, 127, 8);
+}

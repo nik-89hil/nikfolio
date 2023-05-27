@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/sendMessage.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <br><br>
+    
+    <div class="Message">
+        <h3><i class="fa-regular fa-comment"></i> Send Message</h3>
+        <br><br>
+        <form name="submit-to-google-sheet">
+            <label for="Name">Name</label><br>
+            <input type="text" name="Name" required><br><br>
+            <label for="Email">Your Email</label><br>
+            <input type="email" name="Email" required><br><br>
+            <label for="Message">Message</label><br><br>
+            <textarea name="Message"  rows="10" placeholder="write here..." required>
+        
+            </textarea>
+            <br><br>
+            <button class="submitbutton" type="submit">Submit <span id="success"  style="color: green;"></span></button>
+            
+        </form>
+    </div>
+    
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwkVdwujQ0cuHWr2xKuG46QgRQYtMQNSTivGnUNS8BWZDEuq3B1bIfcsZyztXDqWqsVvg/exec'
+        const form = document.forms['submit-to-google-sheet'];
+        const success = document.getElementById("success")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                success.innerHTML = "Your Message Successfully received. contact you soon."
+
+                setTimeout(function(){
+                    success.innerHTML = "";
+                },5000)
+
+                form.reset();
+
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

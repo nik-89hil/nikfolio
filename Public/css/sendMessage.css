@@ -1,0 +1,38 @@
+.Message{
+    margin: auto;
+    margin-top: 18vh;
+    text-align: center;
+
+}
+
+.Message input{
+    outline: none;
+    border: none;
+    width: 25vw;
+    border-bottom: 2px solid rgb(148, 127, 8);
+    padding: 19px;
+    font-size: 16px;
+    color: rgb(87, 48, 123); 
+    font-weight: 700;
+}
+
+.Message textarea{
+    width: 60vw;
+    padding: 4vh;
+    font-size: 16px;
+    color: rgb(87, 48, 123);
+    font-weight: 700;
+}
+
+
+
+.submitbutton{
+    border: 1px solid rgb(148, 127, 8) !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    padding: 2vh !important;
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+
+}
