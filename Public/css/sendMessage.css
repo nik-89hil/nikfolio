@@ -1,38 +1,52 @@
-.Message{
-    margin: auto;
-    margin-top: 18vh;
+.messageContainer{
+    width: 100%;
     text-align: center;
-
 }
 
-.Message input{
-    outline: none;
-    border: none;
-    width: 25vw;
-    border-bottom: 2px solid rgb(148, 127, 8);
-    padding: 19px;
-    font-size: 16px;
-    color: rgb(87, 48, 123); 
-    font-weight: 700;
+.message{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 45%;
+    margin: auto;
 }
 
-.Message textarea{
-    width: 60vw;
-    padding: 4vh;
-    font-size: 16px;
-    color: rgb(87, 48, 123);
-    font-weight: 700;
-}
-
-
-
-.submitbutton{
-    border: 1px solid rgb(148, 127, 8) !important;
-    border-radius: 5px !important;
-    cursor: pointer !important;
-    padding: 2vh !important;
-    font-size: 16px;
+.message a{
+    text-decoration: none;
     color: black;
-    font-weight: 400;
+    font-weight: 600;
+    /* color: rgb(170, 170, 241); */
+    margin: 2vh;
+}
+
+.message a i{
+    font-size: 25px;
+}
+
+#email{
+    background-color: rgb(170, 170, 241);
+    padding: 3vh;
+    border-radius: 90px;
+    transition: 0.1s linear;
+}
+
+#call{
+    background-color: rgb(170, 170, 241);
+    padding: 2vh;
+    border-radius: 10px;
+    transition: 0.1s linear;
+}
+
+
+#email:hover,
+#call:hover{
+    border: 3px solid blue;
+    
+}
+
+@media screen and (max-width:800px){
+    .message{
+        width: 100%;
+    }
 
 }

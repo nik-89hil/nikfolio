@@ -1,0 +1,32 @@
+.aboutcontainer{
+    width: 100%;
+    margin-top: 15vh;
+    text-align: center;
+    /* background-color: black; */
+}
+
+
+.contentAbout{
+    width: 80%;
+    margin: auto;
+    color: black;
+}
+
+.contentAbout a{
+    color: blue;
+}
+
+.contentAbout span{
+    text-decoration: underline;
+    color: blue;
+    font-size: 600;
+}
+
+
+@media screen and (max-width:800px){
+    .contentAbout{
+        text-align: justify;
+        width: 85%;
+
+    }
+}

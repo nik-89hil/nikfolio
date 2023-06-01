@@ -1,0 +1,61 @@
+.skillContainer{
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.skilllist div{
+    transition: 0.4s linear;
+    margin-bottom: 5px;
+}
+
+.skilllist div:hover{
+    color: blue;
+    font-size: 23px;
+    text-decoration: underline;
+}
+
+#html:hover{
+    color: orange;
+}
+
+#bootstrap:hover{
+    color: rgb(131, 83, 190);
+}
+
+#javascript:hover{
+    color: rgb(215, 215, 66);
+}
+
+#rboot:hover{
+    color: crimson;
+}
+
+#node:hover{
+    color: rgb(80, 144, 80);
+    
+}
+
+#reac:hover{
+    color: rgb(183, 235, 255);
+    font-weight: 600;
+}
+
+#mongo:hover{
+    color: green;
+}
+
+#piechart_3d{
+    margin: auto;
+    width: 100%;
+    height: 60vh;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+@media screen and (max-width:800px) {
+    .skillContainer{
+        margin-top: 7vh;
+        
+    }
+
+}

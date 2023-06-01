@@ -1,66 +1,44 @@
-.hiremecontainer{
-    width: 100%;
-    height: 85vh;
-    margin-top: 18vh;
-    background-color: rgb(148, 127, 8);
+.hirmeContainer {
     text-align: center;
-    padding-top: 7vh;
-    overflow-y: scroll;
-    padding-bottom: 4vh;
-    padding-bottom: 9vh;
-}
-
-.hiremecontainer button{
+    width: 100%;
     padding: 3vh;
-    border-radius: 7px;
-    font-weight: 700;
-    width: 30vw;
-    font-size: 20px;
+
+}
+
+.hirmeContainer h2{
+    margin: 2vh;
 }
 
 
-.hirecontent{
-    width: 50vw;
-    border: 2px solid white;
-    padding: 10vh;
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 28px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.word {
     margin: auto;
-    font-weight: 500;
-    color: white;
-    border-radius: 5px;text-align: justify;
-    transition: 0.2s linear;
-}
-
-.hirecontent:hover{
-    color:rgb(87, 48, 123); 
-    font-size: 20px;
-    background-color: white;
-
-}
-
-.listforhire{
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    align-items: center;
-  
-}
-
-.listforhire li{
-    border: 2px solid white;
-    border-radius: 150px;
-    width: 190px;
-    height: 190px;
-    padding: 6vh;
-    transition: 0.5s linear;
-}
-
-.listforhire li:hover{
-    background-color: white;
-    font-size: 20px;
-    width: 220px;
-    height: 220px;
-    color: rgb(87, 48, 123);
-    font-weight: 600;
-    padding: 7vh;
-
+    color: black;
+    font: 700 normal 2.5em 'tahoma';
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }

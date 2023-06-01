@@ -6,57 +6,100 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 18vh;
-    width: 100%;
-    background-color:  rgb(249, 227, 103);
-    color: black;
-    padding: 10vh;
-}
-
-.footerOne i{
-    font-size: 29px;
-    margin: 3px;
-    color: rgb(87, 48, 123);
-
-}
-
-.footerSecond{
+.staticmessage{
+    width: 55px;
+    height: 55px;
+    border: 2px solid blue;
     text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
 }
 
-.footerThree li,
-.footerThree a{
-    color: rgb(87, 48, 123);
-    font-weight: 700;
-
-}
-
-.groupOfskill button{
-    margin: 7px;
-    padding: 5px;
-    border:2px solid rgb(148, 127, 8);
-    border-radius: 9px;
-    color:rgb(87, 48, 123); 
-    font-weight: 700;
-}
-
-.groupOfskill button:hover{
+.staticmessage i,
+.submitbutton i{
+    font-size: 25px;
     cursor: pointer;
 }
 
+.staticmessagecontainer{
+    width: 40%;
+    height: 290px;
+    border: 2px solid blue;
+    text-align: center;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 55px;
+    background-color: white;
+    right: 25px;
+    padding: 2vh;
+}
 
+.staticmessagecontainer form input{
+    margin-bottom: 2vh;
+    width:80%;
+    padding: 5px 9px;
+    font-size: 17px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid blue;
+}
 
+.staticmessagecontainer form input:focus{
+    outline: none;
+}
 
-@media screen and (max-width:768px){
-    #curve_chart{
-        width: 100vw !important;
-        padding: 0px !important;
-        margin: 0 !important;
-        padding-left: -10px;
+.staticmessagecontainer .submitbutton{
+    width: 55px;
+    height: 55px;
+    border: 2px solid blue;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 25px;
+    right: 95px;
+
+}
+
+#messageInput{
+    height: 70px;
+}
+
+#success{
+    background-color: rgb(119, 244, 119);
+    position: fixed;
+    color: black;
+    bottom: 35px;
+    border-radius: 10px;
+    padding: 5px 9px;
+    right: 99px;
+    z-index: -1000;
+
+}
+
+@media screen and (max-width:800px){
+    #success{
+        bottom: 62px;
+        margin: auto;
+    }
+    .staticmessage{
+        bottom: 53px;
+        z-index: +50000;
+        right: 22px;
+    }
+    .staticmessagecontainer{
+        width: 90%;
+        height: 60vh;
+        z-index: +50000;
+        bottom: 70px;
+        right: 20px;
 
     }
+    .staticmessagecontainer .submitbutton{
+        bottom: 53px;
+    }
+
 }

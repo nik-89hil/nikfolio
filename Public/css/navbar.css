@@ -1,0 +1,142 @@
+.navbar{
+    width: 100%;
+    border-bottom: 2px solid blue;
+    display: flex;
+    height: 9vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* padding: 4vh; */
+    padding-left: 5vh;
+    padding-right: 5vh;
+    position: sticky;
+    top: 0;
+    z-index: +2000;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    position: fixed;
+    top: 13px;
+}
+#follow2{
+    display: none;
+}
+
+
+.firstdivNav{
+    width: 30%;
+    color: blue;
+}
+.secondDivNav{
+    /* background-color: black; */
+    min-width: 70%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+   
+}
+
+.secondDivNav div{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.secondDivNav > div > a{
+    color: black;
+    text-decoration: none;
+}
+
+.secondDivNav > div > button,
+#follow2{
+    background-color: rgb(170, 170, 241);
+    border: none;
+    padding: 1vh 2vh;
+    border-radius: 18px;
+    
+
+}
+.secondDivNav > div > button > a,
+#follow2 a{
+    color: black;
+}
+
+.inputfollow{
+    /* float: right; */
+    width: 100%;
+    /* border: 1px solid black; */
+    text-align: right;
+    position: fixed;
+    top: 11vh;
+    z-index: +90000;
+    padding-right: 7vh;
+    transition: 0.6s linear;
+    
+    
+}
+
+.inputfollow input{
+    width: 28vw;
+    margin-top: 8px;
+    padding: 9px;
+    font-weight: 700;
+    color: blue;
+}
+
+.inputfollow button{
+    padding: 9px;
+    background-color: rgb(170, 170, 241);
+    border: 2px solid blue;
+} 
+
+
+
+
+@media screen and (max-width:800px) {
+    .secondDivNav{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        margin: auto;
+        padding: none;
+        justify-content: center;
+        background-color: white;
+        height: 55px;
+    }
+   #follow{
+    display: none;
+   }
+   .navbar{
+    height: 55px;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    margin-bottom: 150px;
+    z-index: +50000;
+   }
+   #follow2{
+    display: block;
+   }
+   .navbar h1{
+    font-size: 22px;
+   }
+   .inputfollow input{
+    margin: auto;
+    width: 60vw;
+    padding-right: none;
+   }
+   .inputfollow button{
+    padding: 9px 5px;
+   }
+   .logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+   
+   
+}
