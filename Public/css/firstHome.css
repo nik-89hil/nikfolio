@@ -42,12 +42,7 @@
 }
 
 @media screen and (max-width:800px) {
-    .firstHomecont{
-        display: block;
-        /* background-color: black; */
-        justify-content: none;
-        align-items: none;
-    }
+  
     .firstflexHome{
         margin: auto;
         width: 90%;
