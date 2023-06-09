@@ -42,6 +42,9 @@
 }
 
 @media screen and (max-width:800px) {
+    .firstHomecont{
+        margin-top: 15vh;
+    }
   
     .firstflexHome{
         margin: auto;
