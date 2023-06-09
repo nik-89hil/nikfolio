@@ -1,7 +1,7 @@
 .firstHomecont{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 10vh;
     padding-left: 5vh;
