@@ -16,11 +16,13 @@
 
     <%- include('./partials/navbar')  %>
 
+
     <%- include('./partials/firstHome') %>
 
     <%- include('./partials/skills') %>
 
-    <%- include('./partials/project') %>
+        <!-- <%- include('./partials/project') %> -->
+    <%- include('./partials/projectOne') %>
 
     <%- include('./partials/hireme') %>
 
@@ -50,14 +52,19 @@
     <button onclick="showchatbox()" class="staticmessage">
         <i class="fa-solid fa-message fa-fade" style="color: #6ba1ff;"></i>
     </button>
+
+
+
+
+   
         
 
 <script>
-    // window.onload(showchatbox());
+  
     
     function showchatbox(){
         const staticmessagecontainer = document.getElementById("staticmessagecontainer");
-        // console.log(staticmessagecontainer.style.display,"from index")
+       
         if(staticmessagecontainer.style.display === "none"){
             staticmessagecontainer.style.display = "block"
         }else{
@@ -102,8 +109,6 @@
 
             form.reset();
 
-           
-
             // setTimeout(function(){
             //     window.location.href = "https://stackoverflow.com/questions/9376596/how-do-i-redirect-to-the-current-page-using-javascript"
             // },12000)
@@ -111,6 +116,27 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+
+   
+
+
+    // function showpasswordfor_Admin(){
+    //         const allclass = document.querySelectorAll(".showpswrd");
+    //         // console.log(allclass)
+    //         allclass.forEach(e=>{
+    //             // console.log(e.getAttribute("type"),"sjfksdjfas")
+    //             if(e.getAttribute("type") === "password"){
+    //                 e.setAttribute("type","text")
+    //             }else{
+    //                 e.setAttribute("type","password")
+    //             }
+    //         })
+    // }
+
+
+
+
+
 
 </script>
     

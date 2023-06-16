@@ -30,6 +30,7 @@
     border: 2px solid blue;
     text-align: center;
     border-radius: 10px;
+    display: none;
     position: fixed;
     bottom: 55px;
     background-color: white;
@@ -79,6 +80,47 @@
     z-index: -1000;
 
 }
+
+#adminButton,
+#submitDeveloperData,
+#showpassDeveloperdata{
+    margin-top: 15px;
+    padding: 3px 15px;
+    border-radius: 5px;
+    position: relative;
+    left: 15px;
+    bottom: 25px;
+   
+}
+
+.admin_container{
+    border: 2px solid grey;
+    border-radius: 5px ;
+    height: auto;
+    width: 40%;
+    margin: auto;
+    padding: 20px 15px;
+    margin-top:15vh;
+}
+
+.admin_container form input{
+    margin: 10px;
+}
+
+#maincontent{
+    display: block;
+
+}
+
+#developercontent_form{
+    display: none;
+}
+
+
+
+
+
+
 
 @media screen and (max-width:800px){
     #success{
