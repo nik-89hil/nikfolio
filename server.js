@@ -123,7 +123,7 @@ app.get("*",(req,res)=>{
 })
 
 app.use((error,req,res,next)=>{
-    res.json({success:false,message:"something unexpected happen report your problem at nikhilkumar19072002@gmail.com",problem:error?.message})
+    res.json({success:false,message:"something unexpected happen report your problem at nikhilkumar19072002@gmail.com"})
     res.end();
 })
 
