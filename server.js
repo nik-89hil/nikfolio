@@ -2,75 +2,130 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 const ejs = require('ejs');
-const subscription=[];
-const fs = require("fs");
-const checkDevePass = require('./middleware/checkDevePass')
+const adminRouter = require('./routes/admin');
+const {getConnection} = require("./utility/database")
+require("dotenv").config();
 
 
-app.use("/static",express.static("Public"));
-app.set("view engine","ejs");
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-// app.use("/admin",checkDevePass);
+app.use("/static",express.static("Public"));
+app.set("view engine","ejs");
 
+app.use("/admin",adminRouter);
 
+//home route
 
-app.get("/",(req,res)=>{
+app.get("/",async(req,res)=>{
+    const client = getConnection();
+    await client.connect();
+    const collection = await client.db("nikfolio_db").collection("subscribers");
+    const findResult = await collection.countDocuments();
+    // console.log(findResult);
     res.render("index",{
-        subscriber:subscription.length +99
+        subscriber:findResult
     })
 })
 
-app.post("/",(req,res)=>{
-    const useremail = req.body.Subscription;
-    const data = useremail + "\n"
-    fs.appendFile('subscriber.txt',data, 'utf8',
-	// callback function
-	function(err) {		
-		if (err) throw err;
-		// if no error
-		console.log("Data is appended to file successfully.")
-});
+app.post("/",async(req,res)=>{
+    const user = req.body.subscriberEmail;
+    // console.log(user)
 
-    for(let i=0; i<=subscription.length; i++){
-        if(useremail === subscription[i]){
-            console.log("already subscribe")
-            res.send("<a href='/'> "+useremail+" subscribed already !! . go to home.<a>")
-            
-        }
+    const client = getConnection();
+    await client.connect();
+    const collection = await client.db("nikfolio_db").collection("subscribers");
+    const filteredDocs = await collection.find({subscriberEmail: user}).toArray();
+    // console.log(filteredDocs.length,"----")
+
+    if(filteredDocs.length !== 0){
+        res.send(`You already subcribed this website....<a href='/'>go to home</a>`);
+        res.end();
+        return 
     }
-    subscription[subscription.length] =  useremail;
 
-
-    res.redirect("/")
+    await collection.insertOne({...req.body,role:"admin"});
+    res.redirect("/");
+    res.end();
 })
 
+app.get("/skill-set",async(req,res)=>{
+    // console.log(__dirname)
+    const client = getConnection();
+    await client.connect();
+    const collection = await client.db("nikfolio_db").collection("subscribers");
+    const findResult = await collection.countDocuments();
 
+    res.render("skill-set",{
+        subscriber:findResult
+    })
+})
 
+app.get("/projects",async(req,res)=>{
+    const client = getConnection();
+    await client.connect();
+    const collection = await client.db("nikfolio_db").collection("subscribers");
+    const findResult = await collection.countDocuments();
+    res.render("projectOne",{
+        subscriber:findResult
+    })
+})
 
-// app.get("/admin",checkDevePass,(req,res)=>{
-//     fs.readFile("./subscriber.txt","utf-8",(err,data)=>{
-//         if(err){
-//             return res.send("Error Happened sir.. in line 58 (server error)")
-//         }
-//         return res.send(data);
-//     })
+app.get("/certification",async(req,res)=>{
+    const client = getConnection();
+    await client.connect();
+    const collection = await client.db("nikfolio_db").collection("subscribers");
+    const findResult = await collection.countDocuments();
+    res.render("certification",{
+        subscriber:findResult
 
-    // res.send("this is for developer thank YOu")
+    })
+})
 
+// app.get("/about",(req,res)=>{
+//     res.render("about_me",{})
 // })
 
+app.get("/contact-me",async(req,res)=>{
+    const client = getConnection();
+    await client.connect();
+    const collection = await client.db("nikfolio_db").collection("subscribers");
+    const findResult = await collection.countDocuments();
+    res.render("contact",{
+        subscriber:findResult
+    })
+})
 
-// app.post("/admin",(req,res)=>{
-//     if
-//     res.end();
-// })
+app.post("/contact-me",async(req,res)=>{
+    console.log(req.body)
+    const user = req.body.useremail;
+    // console.log(user)
 
+    const client = getConnection();
+    await client.connect();
+    const collection = await client.db("nikfolio_db").collection("work");
+    const filteredDocs = await collection.find({useremail: user}).toArray();
+    // console.log(filteredDocs.length,"----")
 
+    if(filteredDocs.length !== 0){
+        res.send(`I will contact you soon....<a href='/'>go to home</a>`);
+        res.end();
+        return 
+    }
 
+    await collection.insertOne({...req.body});
+    res.redirect("/");
+    res.end();
+})
 
+app.get("*",(req,res)=>{
+    res.send(`page not found \n  <a href='/'> go to home</a>`)
+    res.end();
+})
 
-
+app.use((error,req,res,next)=>{
+    res.json({success:false,message:"something unexpected happen report your problem at nikhilkumar19072002@gmail.com",problem:error?.message})
+    res.end();
+})
 
 app.listen(PORT,()=>{
     console.log("server started at ", PORT)

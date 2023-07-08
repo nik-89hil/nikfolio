@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin: auto;
+    margin-top: 13vh !important;
+    margin-bottom: 9vh;
+    font-family: fantasy;
+}
+
+
+
+#post{
+    border: 1px solid green;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: 3vh;
+    padding: 4vh;
+}
+
+.post_one{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#profile_photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right:2vh;
+}
+
+.post_one p {
+    color: gray;
+    font-size: 13px;
+}
+
+.postData{
+    font-size: 14px;
+    text-align: justify;
+    height: auto;
+}
+
+.post_tags button,
+.post_tags a{
+    padding:2px;
+    color: blue;
+    background-color: white;
+    border: none;
+}
+
+
+.gallery img,
+.gallery video{
+    width: 100%;
+    object-fit: cover;
+    transition: .3s linear;
+
+}
+
+.gallery img:hover{
+    opacity:0.6;
+}
+
+.codeShare button{
+    padding: 5px 9px;
+    border: 2px solid gray;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid green;
+    transition: 0.3s linear;
+}
+
+.codeShare button a{
+    text-decoration: none;
+    color: green;
+    transition: .3s linear;
+
+}
+
+.codeShare button:hover{
+    border: 2px solid red;
+    padding: 5px 5vh;
+}
+
+.codeShare button:hover a{
+    color: red;
+}
+
+.codeShare button i{
+    color: green;
+    font-size: 16px;
+}
+
+.codeShare button:hover i{
+    color: red;
+}
+
+#back{
+    width: 120px;
+    height: 30px;
+    /* background-color: black; */
+    position: fixed;
+    bottom: 90px;
+    right: 27px;
+}
+
+#back a{
+    text-decoration: none;
+    font-size: 16px;
+    color: purple;
+    transition: 0.2s linear;
+}
+
+#back a:hover{
+    color: green;
+    text-decoration: underline;
+}
+
+@media  screen and (max-width:800px){
+    
+#post{
+    border: 1px solid green;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 3vh;
+    padding: 2vh;
+}
+.postData{
+    font-size: 12px;
+    text-align: justify;
+    height: auto;
+}
+#back{
+    width: auto;
+    height: 30px;
+    /* background-color: black; */
+    position: fixed;
+    bottom: 90px;
+    right: 15px;
+}
+#back a{
+    text-decoration: none;
+    font-size: 15px;
+    color: purple;
+    transition: 0.2s linear;
+}
+}
+
+

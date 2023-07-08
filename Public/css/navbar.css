@@ -1,142 +1,205 @@
-.navbar{
-    width: 100%;
-    border-bottom: 2px solid blue;
+
+
+.NavBar{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+.navbar_first{
     display: flex;
-    height: 9vh;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    /* padding: 4vh; */
-    padding-left: 5vh;
-    padding-right: 5vh;
-    position: sticky;
-    top: 0;
-    z-index: +2000;
+    /* border: 1px solid white; */
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
-.logo{
+
+.navbar_first div{
+    margin: 5px;
+}
+
+.navbar_first div span i{
+    font-size: 25px;
+}
+.navbar_first div p{
+    font-size: 20px;
+
+}
+
+#commenticon,
+#githubicon,
+#linkedinicon
+{
+    transition: 0.2s linear;
+}
+
+#commenticon >a,
+#githubicon > a,
+#linkedinicon > a{
+    color: white;
+}
+
+#commenticon:hover{
+    border: 2px solid red;
+}
+
+#commenticon:hover > a >i{
+    color: red;
+}
+
+#githubicon:hover{
+    border: 2px solid green;
+}
+
+#linkedinicon:hover{
+    border: 2px solid blue;
+}
+#linkedinicon:hover >a> i{
+    color: blue;
+}
+
+.navbar_first div span{
+    border: 2px solid white;
+    padding: 10px;
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    position: fixed;
-    top: 13px;
-}
-#follow2{
-    display: none;
-}
-
-
-.firstdivNav{
-    width: 30%;
-    color: blue;
-}
-.secondDivNav{
-    /* background-color: black; */
-    min-width: 70%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-   
-}
-
-.secondDivNav div{
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.secondDivNav > div > a{
-    color: black;
-    text-decoration: none;
-}
-
-.secondDivNav > div > button,
-#follow2{
-    background-color: rgb(170, 170, 241);
-    border: none;
-    padding: 1vh 2vh;
-    border-radius: 18px;
-    
+    text-align: center;
 
 }
-.secondDivNav > div > button > a,
-#follow2 a{
-    color: black;
+
+.followerContainer{
+    padding: 10px;
+    padding-top: 15px;
+    /* border: 1px solid white; */
+    text-align: center;
 }
 
-.inputfollow{
-    /* float: right; */
-    width: 100%;
-    /* border: 1px solid black; */
-    text-align: right;
-    position: fixed;
-    top: 11vh;
-    z-index: +90000;
-    padding-right: 7vh;
-    transition: 0.6s linear;
-    
-    
+.followerContainer button,
+.followerContainer span{
+    margin: 8px;
 }
 
-.inputfollow input{
-    width: 28vw;
-    margin-top: 8px;
-    padding: 9px;
-    font-weight: 700;
-    color: blue;
+.followerContainer button{
+    padding: 7px 15px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: 0.3s linear;
+    color: white;
+    background-color: black;
+    border:2px solid white;
+    margin-top: 3vh;
 }
 
-.inputfollow button{
-    padding: 9px;
-    background-color: rgb(170, 170, 241);
-    border: 2px solid blue;
-} 
+.followerContainer button:hover{
+    border: 2px solid green;
+    /* color: green; */
+}
 
-
-
-
-@media screen and (max-width:800px) {
-    .secondDivNav{
-        position: fixed;
-        bottom: 0px;
-        width: 100%;
-        margin: auto;
-        padding: none;
-        justify-content: center;
-        background-color: white;
-        height: 55px;
-    }
-   #follow{
-    display: none;
-   }
-   .navbar{
-    height: 55px;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    margin-bottom: 150px;
-    z-index: +50000;
-   }
-   #follow2{
+.followerContainer button:hover + .follerinput{
     display: block;
-   }
-   .navbar h1{
-    font-size: 22px;
-   }
-   .inputfollow input{
-    margin: auto;
-    width: 60vw;
-    padding-right: none;
-   }
-   .inputfollow button{
-    padding: 9px 5px;
-   }
-   .logo{
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-    position: fixed;
-    top: 15px;
-    left: 15px;
 }
-   
-   
+
+#noofFollower{
+    font-size: 22px;
+}
+
+
+.navTags ul{
+    /* width: auto; */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navTags ul li a{
+    text-decoration: none;
+    color: white;
+}
+.navTags ul li{
+    transition: 0.4s linear;
+}
+
+.navTags li:hover {
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    padding: 7px 9px;
+
+}
+
+.follerinput{
+    display: inline-block;
+    transition: 0.4s;
+    width: 450px;
+    padding-bottom: 5px;
+}
+
+.follerinput form input{
+    width: 100%;
+    padding: 5px 7px;
+    background-color: transparent;
+    color: white;
+    outline: 2px solid black;
+    transition: 0.3s;
+    border-radius: 9px;
+    
+}
+
+.follerinput form input::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+
+.follerinput form input:focus-within{
+    box-shadow: 2px 2px 9px white;
+    padding: 8px 9px;
+}
+
+#topgobutton{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid black;
+    background-color: black;
+}
+
+@media screen and (max-width:800px){
+    .follerinput{
+        width: 300px;
+    }
+    .navbar_first{
+        padding-top: 60px;
+        padding-bottom: 35px;
+    }
+    .navTags ul{
+        display: flex;
+        position: fixed;
+        top: 0;
+        background-color: black;
+        width: 100%;
+        opacity: 0.4;
+    }
+    
+    
+    .navTags ul li a{
+        font-size: 12px;
+    }
+    .navTags li:hover {
+        border-bottom: 2px solid white;
+        border-radius: 2px;
+        padding: 0px;
+    
+    }
 }

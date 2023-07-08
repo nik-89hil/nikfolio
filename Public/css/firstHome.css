@@ -1,74 +1,189 @@
-.firstHomecont{
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&family=Inconsolata:wght@200;500&family=Kalam&family=Lobster&family=Noto+Sans:ital@1&family=Satisfy&family=Signika:wght@500&family=Tilt+Prism&display=swap');
+
+
+
+
+.profileContainer{
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
-    padding-left: 5vh;
-    padding-right: 5vh;
-    z-index: -5000;
-    /* border: 1px solid black; */
-}
-.firstHomecont div{
-    margin: 10px;
-}
-
-.firstflexHome {
-    width: 40%;
-}
-
-.firstflexHome img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-}
-
-.secondHomecont{
-    width:60% ;
-    text-align: center;
-    /* border: 2px solid blue; */
-    border-radius: 25px;
+    /* border: 1px solid green; */
     margin: auto;
-    padding: 2vh;
+    margin-top: 13vh;
 }
 
-.contentsecondHomecont{
-    /* border: 2px solid blue; */
-    padding: 5vh;
+.profileContainer p,
+.profileContainer div{
+    /* border: 1px solid black; */
+    margin: 3px;
+}
+
+
+
+.profileContainer p{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 17px;
+}
+
+.profileContainer div span{
+    color: rgb(108, 107, 107);
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.profileContainer img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.profileabout{
+    width: 50%;
+    align-items: center;
+    border: 1px solid green;
+    margin: auto;
+    margin-top: 3vh;
+    padding: 10px 7px;
+    border-radius: 5px;
+}
+
+#post{
+    border: 1px solid green;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: 3vh;
+    padding: 4vh;
+}
+
+.post_one{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#profile_photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right:2vh;
+}
+
+.post_one p {
+    color: gray;
+    font-size: 13px;
+}
+
+.postData{
+    font-size: 14px;
     text-align: justify;
-    /* background-color:rgb(170, 170, 241); */
-    border-radius: 25px;
+    height: auto;
 }
 
-@media screen and (max-width:800px) {
-    .firstHomecont{
-        margin-top: 15vh;
-    }
-  
-    .firstflexHome{
+.post_tags button,
+.post_tags a{
+    padding:2px;
+    color: blue;
+    background-color: white;
+    border: none;
+}
+
+
+.gallery img{
+    width: 100%;
+    object-fit: cover;
+    transition: .3s linear;
+}
+
+.gallery iframe{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: .3s linear;
+}
+
+.gallery img:hover{
+    opacity:0.6;
+}
+
+.codeShare button{
+    padding: 5px 9px;
+    border: 2px solid gray;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid green;
+    transition: 0.3s linear;
+}
+
+.codeShare button a{
+    text-decoration: none;
+    color: green;
+    transition: .3s linear;
+
+}
+
+.codeShare button:hover{
+    border: 2px solid red;
+    padding: 5px 5vh;
+}
+
+.codeShare button:hover a{
+    color: red;
+}
+
+.codeShare button i{
+    color: green;
+    font-size: 16px;
+}
+
+.codeShare button:hover i{
+    color: red;
+}
+
+#myBtn{
+    color: red;
+    cursor: pointer;
+}
+
+@media  screen and (max-width:800px) {
+    .profileContainer{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       /* border: 1px solid green; */
         margin: auto;
+        margin-top: 13vh;
+
+    }
+    .profileabout{
         width: 90%;
-        height: 360px;
-        /* background-color: blue; */
-        border-radius: 15px;
-    }
-    .firstflexHome img{
-        margin-top: 5vh;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        opacity: 0.6;
-        border-radius: 15px;
-        z-index: -5000;
-    }
-    .firstHomecont div{
+        align-items: center;
+        border: 1px solid green;
         margin: auto;
+        margin-top: 3vh;
+        /* padding: 10px 7px; */
+        border-radius: 5px;
     }
-    .secondHomecont{
+    #post{
+        /* border: 1px solid green; */
         width: 100%;
-        position: relative;
-        z-index: +5000;
-        top: -30px;
+        height: auto;
+        margin: auto;
+        margin-top: 3vh;
+        padding: 2vh;
+    }
+    .postData{
+        font-size: 13px;
+        text-align: justify;
+        height: auto;
+    }
+    .gallery iframe{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        transition: .3s linear;
+        border-radius: 10px;
     }
 }

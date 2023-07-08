@@ -1,3 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+  text-align: center;
+  margin: auto;
+  margin-top: 13vh !important;
+  margin-bottom: 9vh;
+  font-family: fantasy;
+
+}
+
+
+
 .projectContainerONe{
     width: 90%;
     margin: auto;
@@ -83,4 +102,44 @@
   .cards:hover > .card:not(:hover) {
     filter: blur(10px);
     transform: scale(0.9, 0.9);
+  }
+
+  #firstvideo,
+  #secondvideo{
+    width: 90%;
+    /* background-color: black; */
+    margin: auto;
+    display: flex;
+    height: 450px;
+  }
+  #item1,#item2, #item3 ,#item4{
+    width: 50%;
+    border-radius: 20px;
+    margin: 5px;
+    transition: .5s linear;
+  }
+
+
+
+  #item3:hover,#item1:hover,#item2:hover,#item4{
+    width: 100%;
+  }
+
+  @media  screen and (max-width:800px){
+    #firstvideo,
+    #secondvideo{
+    width: 90%;
+    /* background-color: black; */
+    margin: auto;
+    display: block;
+    height: auto;
+  }
+  #item1,#item2, #item3 ,#item4{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    /* margin: 5px; */
+    transition: .5s linear;
+  }
   }

@@ -6,12 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/css/projectone.css">
-  <title>Document</title>
+  <script src="https://kit.fontawesome.com/b37c45463e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&family=Inconsolata:wght@200;500&family=Kalam&family=Lobster&family=Noto+Sans:ital@1&family=Signika:wght@500&display=swap" rel="stylesheet">
+  <title>projects</title>
 </head>
 
 <body>
-  <div id="projecttag"></div>
-  <br><br>
+  <%- include('./partials/NavbarOne')  %>
+  <br>
   <h1 style="text-align: center;margin-top: 15px;">Projects</h1>
   <br>
   <div class="projectContainerONe">
@@ -123,8 +125,25 @@
 
     </div>
   </div>
+  <br><br>
+  <h1>Project Video</h1>
+  <br>
+  <div id="firstvideo">
+    <iframe id="item1" src="https://drive.google.com/file/d/1UCrAhlsIicZZOJKY2cPKhmnBpWDI3Ipl/preview" allow="autoplay"></iframe>
+    <iframe id="item2" src="https://drive.google.com/file/d/1-IAsR37oPn336OU3T74NgXdt2PK8NTYB/preview"  allow="autoplay"></iframe>
+  </div>
+  
+  <div id="secondvideo">
+    <iframe id="item3" src="https://drive.google.com/file/d/1yOaWwksBftwwPqnLaIXnDb9apd55mr8k/preview"  allow="autoplay" ></iframe>
+    <iframe id="item4" src="https://drive.google.com/file/d/1hm3N-pY0JI9RtyMoRCaZMNUv5UdKgDea/preview"  allow="autoplay"></iframe>
+  </div>
+  
+ <br><br>
+ <h6 style="margin-left: 15px;">working on more projects updated soon...</h6>
+ <br><br>
+  
 
-
+  <%- include('./partials/fotter') %>
 
 </body>
 

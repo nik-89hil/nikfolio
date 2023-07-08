@@ -1,61 +1,93 @@
-.skillContainer{
-    margin-top: 15vh;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
     text-align: center;
-}
-
-.skilllist div{
-    transition: 0.4s linear;
-    margin-bottom: 5px;
-}
-
-.skilllist div:hover{
-    color: blue;
-    font-size: 23px;
-    text-decoration: underline;
-}
-
-#html:hover{
-    color: orange;
-}
-
-#bootstrap:hover{
-    color: rgb(131, 83, 190);
-}
-
-#javascript:hover{
-    color: rgb(215, 215, 66);
-}
-
-#rboot:hover{
-    color: crimson;
-}
-
-#node:hover{
-    color: rgb(80, 144, 80);
-    
-}
-
-#reac:hover{
-    color: rgb(183, 235, 255);
-    font-weight: 600;
-}
-
-#mongo:hover{
-    color: green;
-}
-
-#piechart_3d{
     margin: auto;
-    width: 100%;
-    height: 60vh;
-    /* border: 1px solid black; */
-    text-align: center;
+    margin-top: 13vh !important;
+    margin-bottom: 9vh;
+    font-family: fantasy;
+
 }
 
-@media screen and (max-width:800px) {
-    .skillContainer{
-        margin-top: 7vh;
-        
-    }
+.sill_container{
+    background-color: rgb(255, 194, 194);
+    width: 55%;
+    border: 2px solid red;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
 
+}
+
+.sill_container span{
+    font-size: 19px;
+}
+
+
+
+
+.sill_container i{
+    font-size: 25px;
+}
+
+#htmlfive{
+    border: 2px solid orange;
+    background-color: rgb(255, 226, 173);
+    transition:.3s linear;
+}
+
+#reactjs{
+    border: 2px solid blue;
+    background-color: rgb(147, 147, 255);
+    transition:.3s linear;
+
+}
+
+#javascript{
+    border: 2px solid yellow;
+    background-color: rgb(255, 255, 155);
+    transition:.3s linear;
+}
+
+#nodejs,#mongodb{
+    border: 2px solid green;
+    background-color:rgb(174, 255, 174);
+    transition:.3s linear;
+}
+
+#bootstrap{
+    border: 2px solid purple;
+    background-color:rgb(255, 166, 255);
+    transition:.3s linear;
+}
+
+#reactbootstrap,
+#expressjs{
+    transition: .3s linear;
+}
+
+
+#bootstrap:hover,
+#nodejs:hover,
+#mongodb:hover,
+#javascript:hover,
+#reactjs:hover,
+#htmlfive:hover,
+#reactbootstrap:hover,
+#expressjs:hover{
+    background-color: white;
+    width: 60%;
+}
+
+@media  screen and (max-width:800px) {
+    .sill_container{
+        width: 85%;
+    }
 }

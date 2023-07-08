@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/static/css/navbar.css">
+
+<body>
+    <NavBar>
+        <div class="NavBar" id="topgo">
+            <div class="navbar_first">
+                <div><p>nikfolio.com</p></div>
+                <div><span id="commenticon"><a href="mailto:nikhilkumar19072002@gmail.com?subject= write your subject"><i class="fa-regular fa-comment"></i></a></span>
+                    <span id="githubicon"><a href="https://github.com/nik-89hil" target="_blank"><i class="fa-brands fa-github"></i></a></span>
+                    <span id="linkedinicon"><a href="https://www.linkedin.com/in/nikhil-kumar-416a46247/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></span>
+                </div>
+            </div>
+            <div class="followerContainer">
+                <span class="follerinput"><form action="/" method="post"><input type="email" name="subscriberEmail" placeholder="Type your email"><br>
+                    <button type="submit">Follow This Profile</button><br>
+                </form>
+                </span><br>
+                <span id="noofFollower"><%=subscriber %></span><br>
+                <p>Followers</p>
+            </div>
+            <div class="navTags">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/skill-set">SKILLS</a></li>
+                    <li><a href="/projects">PROJECTS</a></li>
+                    <!-- <li><a href="">SERVICES</a></li> -->
+                    <li><a href="/certification">CERTIFICATION</a></li>
+                    <li><a href="/contact-me">CONTACT</a></li>
+                </ul>
+            </div>
+            
+
+        </div>
+        
+        
+    </NavBar>
+
+
+
+    <div>
+        <button id="topgobutton"><a href="#topgo"><i class="fa-solid fa-caret-up fa-2xl"></i></a></button>
+    </div>
+</body>
+
