@@ -4,7 +4,7 @@ require('dotenv').config();
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 let client =  null;
-// console.log(process.env.MONGODB_URI)
+// console.log(process.env.MONGODB_URI)ffafdfdsfd
 
 function createConnection(){
     client = new MongoClient(process.env.MONGODB_URI, {
