@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subscribe || nikfolio</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 15px;
+            margin: auto;
+        }
+        h1,h3{
+            text-align: center;
+        }
+
+        th{
+            color: black;
+            font-weight: 800;
+            font-size: 19px;
+        }
+        
+        h1{
+            width: 300px;
+            border: 2px solid red;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Dashboard -</h1>
+    <h1 style="border: none;"><button><a href="/admin/verified/message">Check Message</a></button></h1>
+    <h3>No. of subscriber : <%= array.length  %></h3>
+
+    <br>
+
+    <h3>-- email of subscriber --</h3>
+    <br>
+    <div id="followerContainer">
+        <table>
+            <tr>
+              <th>S. no.</th>
+              <th>Email</th>
+              <th>Role</th>
+            </tr>
+            <% for( let index = 0; index < array.length; index++ ) { %>
+                <tr>
+                    <td><%=index+1%></td>
+                    <td><%= array[index].subscriberEmail %></td>
+                    <td><%= array[index].role %></td>
+                </tr>
+            <% } %>
+            
+          </table>
+    </div>
+
+   
+
+
+    <script>
+        console.log(array)
+    </script>
+</body>
+</html>

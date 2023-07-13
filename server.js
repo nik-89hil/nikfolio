@@ -2,13 +2,18 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 const ejs = require('ejs');
+const cookieParser = require('cookie-parser');
+
 const adminRouter = require('./routes/admin');
 const {getConnection} = require("./utility/database")
-require("dotenv").config();
+
+
 
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+require("dotenv").config();
+app.use(cookieParser());
 app.use("/static",express.static("Public"));
 app.set("view engine","ejs");
 
@@ -43,7 +48,7 @@ app.post("/",async(req,res)=>{
         return 
     }
 
-    await collection.insertOne({...req.body,role:"admin"});
+    await collection.insertOne({...req.body,role:"user"});
     res.redirect("/");
     res.end();
 })
@@ -117,14 +122,25 @@ app.post("/contact-me",async(req,res)=>{
     res.end();
 })
 
+
+
+
+
+
+
+
+
 app.get("*",(req,res)=>{
     res.send(`page not found \n  <a href='/'> go to home</a>`)
     res.end();
 })
 
 app.use((error,req,res,next)=>{
-    res.json({success:false,message:"something unexpected happen report your problem at nikhilkumar19072002@gmail.com"})
-    res.end();
+    // console.log(error?.message)
+    if(error){
+    res.json({success:false,message:"something unexpected happen report your problem at nikhilkumar19072002@gmail.com",eroors:error.message})
+    }
+    
 })
 
 app.listen(PORT,()=>{
