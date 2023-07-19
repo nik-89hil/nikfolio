@@ -181,8 +181,13 @@
         width: 300px;
     }
     .navbar_first{
+        display: block;
+       text-align: center;
         padding-top: 60px;
         padding-bottom: 35px;
+    }
+    #firNab{
+        margin-bottom: 5vh;
     }
     .navTags ul{
         display: flex;
